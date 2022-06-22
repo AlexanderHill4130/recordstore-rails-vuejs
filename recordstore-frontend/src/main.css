@@ -1,97 +1,60 @@
 @tailwind base;
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/preflight";
- */
 @tailwind preflight;
-
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
 @tailwind components;
+@tailwind utilities;
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
 
-.input {
-  @apply appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight;
+/*.input {
+  @apply: appearance-none block w-full bg-gray-400 text-gray-400 border border-gray-200 rounded py-3 px-4 leading-tight;
 }
 
 .input:focus {
-  @apply outline-none bg-white border-grey;
+  @apply: outline-none bg-white border-gray-200;
 }
 
 .label {
-  @apply block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2;
+  @apply: block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2;
 }
 
 .select {
-  @apply appearance-none py-3 px-4 pr-8 block w-full bg-grey-lighter border border-grey-lighter text-grey-darker
+  @apply: appearance-none py-3 px-4 pr-8 block w-full bg-gray-400 border border-grey-lighter text-gray-800
    rounded leading-tight;
    -webkit-appearance: none;
 }
 
 .select:focus {
-  @apply outline-none bg-white border-grey;
+  @apply: outline-none bg-white border-grey;
 }
 
 .link {
-  @apply no-underline;
+  @apply: no-underline;
+}*/
+
+.form-container {
+  @apply border p-10 drop-shadow rounded-md;
+}
+
+.form-title {
+  @apply text-2xl mb-6 text-gray-800 font-bold;
 }
 
 .link-grey {
-  @apply text-grey-dark;
+  @apply text-gray-400 hover:text-gray-800;
 }
 
-.link-grey:hover {
-  @apply text-grey-darker;
+.input-label {
+  @apply block uppercase tracking-wide text-gray-800 text-xs font-bold mb-2;
 }
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
- */
-@tailwind utilities;
+.input-box {
+  @apply appearance-none block w-full bg-gray-200 text-gray-400 border border-gray-200 rounded py-3 px-4 leading-tight;
+}
 
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
+
+.submit-button {
+  @apply font-sans font-bold px-4 rounded cursor-pointer no-underline bg-green-400 hover:bg-green-800 block w-full py-4 text-neutral-800 hover:text-white items-center justify-center;
+}
+
+.error-text {
+  @apply text-red-800;
+}
