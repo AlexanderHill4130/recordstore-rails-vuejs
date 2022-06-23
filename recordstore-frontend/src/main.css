@@ -30,6 +30,18 @@
   @apply: no-underline;
 }*/
 
+.header-div {
+  @apply bg-gray-200 py-5;
+}
+
+.header-logo {
+  @apply fill-current text-indigo-400;
+}
+
+.header-title {
+  @apply uppercase text-sm font-mono pl-4 font-semibold no-underline text-indigo-400 hover:text-indigo-800;
+}
+
 .form-container {
   @apply border p-10 drop-shadow rounded-md;
 }
@@ -39,7 +51,7 @@
 }
 
 .link-grey {
-  @apply text-gray-400 hover:text-gray-800;
+  @apply text-gray-400 hover:text-gray-800 no-underline;
 }
 
 .input-label {
