@@ -4,7 +4,7 @@
     <h3 class="font-mono font-regular text-3xl mb-4">Add a new artist</h3>
     <form action="" @submit.prevent="addArtist">
       <div class="mb-6">
-        <input class="input"
+        <input class="input-label"
           autofocus autocomplete="off"
           placeholder="Type an arist name"
           v-model="newArtist.name" />
@@ -12,7 +12,6 @@
 
       <input type="submit" value="Add Artist" class="font-sans font-bold px-4 rounded cursor-pointer no-underline bg-green-400 hover:bg-green-800 block w-full py-4 text-white items-center justify-center" />
     </form>
-
 
     <hr class="border border-gray-200 my-6" />
 
@@ -24,7 +23,6 @@
             {{ artist.name }}
           </p>
 
-
           <button class="bg-tranparent text-sm hover:bg-blue-400 hover:text-white text-blue-400 border border-blue-400 no-underline font-bold py-2 px-4 mr-2 rounded" @click.prevent="editArtist(artist)">Edit</button>
 
           <button class="bg-tranparent text-sm hover:bg-red-400 hover:text-white text-red-400 border border-red-400 no-underline font-bold py-2 px-4 mr-2 rounded" @click.prevent="removeArtist(artist)">Delete</button>
@@ -33,7 +31,7 @@
         <div v-if="artist == editedArtist">
           <form action="" @submit.prevent="updateArtist(artist)">
             <div class="mb-6 p-4 bg-white rounded border border-gray-200 mt-4">
-              <input class="input" v-model="artist.name" />
+              <input class="input-label" v-model="artist.name" />
               <input type="submit" value="Update" class=" my-2 bg-transparent text-sm hover:bg-blue-400 hover:text-white text-blue-400 border border-blue-400 no-underline font-bold py-2 px-4 rounded cursor-pointer">
             </div>
           </form>
